@@ -115,7 +115,7 @@ public class BookHotel extends JFrame implements ActionListener{
        
        try{
            Conn c=new Conn();
-           ResultSet rs=c.s.executeQuery("select * from customer where username='Pari'");
+           ResultSet rs=c.s.executeQuery("select * from customer where username='"+username+"'");
            while(rs.next()){
                l21.setText(rs.getString("username"));
                  l22.setText(rs.getString("id"));
